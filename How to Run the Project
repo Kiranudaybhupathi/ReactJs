@@ -1,0 +1,5 @@
+Clone the repository to your local machine.
+Navigate to the project folder in your terminal.
+Run npm install to install the dependencies.
+Run npm start to start the development server.
+Open http://localhost:3000 in your browser to view the app.
