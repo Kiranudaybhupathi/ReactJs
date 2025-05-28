@@ -1,36 +1,49 @@
-import React, { useState } from 'react';
-import TodoList from './components/TodoList';
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Buy the latest products at unbeatable prices on eShop, your trusted React-powered eCommerce platform." />
+    <meta name="keywords" content="ecommerce, shop, react, online store, buy, electronics, fashion" />
+    <meta name="author" content="Your Company Name" />
 
-function App() {
-  const [todos, setTodos] = useState([]);
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.yourdomain.com/" />
+    <meta property="og:title" content="eShop - Modern React eCommerce Store" />
+    <meta property="og:description" content="Explore premium products with seamless checkout and fast delivery." />
+    <meta property="og:image" content="%PUBLIC_URL%/preview.png" />
 
-  const addTodo = (text) => {
-    const newTodos = [...todos, { text, completed: false }];
-    setTodos(newTodos);
-  };
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.yourdomain.com/" />
+    <meta property="twitter:title" content="eShop - Modern React eCommerce Store" />
+    <meta property="twitter:description" content="Explore premium products with seamless checkout and fast delivery." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/preview.png" />
 
-  const toggleComplete = (index) => {
-    const newTodos = [...todos];
-    newTodos[index].completed = !newTodos[index].completed;
-    setTodos(newTodos);
-  };
+    <!-- Title & Favicon -->
+    <title>eShop | Your Modern Online Store</title>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 
-  return (
-    <div className="App">
-      <h1>To-Do List</h1>
-      <TodoList todos={todos} toggleComplete={toggleComplete} />
-      <input
-        type="text"
-        onKeyPress={(event) => {
-          if (event.key === 'Enter' && event.target.value) {
-            addTodo(event.target.value);
-            event.target.value = '';
-          }
-        }}
-        placeholder="Add a new task"
-      />
-    </div>
-  );
-}
+    <!-- Manifest for PWA Support -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-export default App;
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (optional - if you're using it via CDN) -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0f172a" />
+  </head>
+  <body class="bg-white text-gray-800 font-sans antialiased">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
